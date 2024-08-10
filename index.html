@@ -1,9 +1,10 @@
 ﻿<!DOCTYPE html>
+
 <html lang="en">
-<!-- This is an HTML comment -->
+<!-- This is HTML comment -->
 <head>
     <meta charset="UTF-8"/>
-    <title>My Canvas</title>
+    <title>My Canvas </title>
     <style>
         /* Ensure the canvas takes up the full screen */
         body, html {
@@ -19,25 +20,13 @@
     </style>
 </head>
 <body onload="main()">
-    <!-- Canvas -->
-    <canvas id="AMV">
-        This browser does not support the HTML5 canvas element 
-    </canvas>
-    <!-- Script -->
-    <script src="Canvas.js"></script>
-    <script src="gl-matrix-min.js"></script>
-    <script>
-        function resizeCanvas() {
-            var canvas = document.getElementById('AMV');
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
-        function main() {
-            resizeCanvas(); // Set canvas size on load
-            window.addEventListener('resize', resizeCanvas); // Resize canvas if window is resized
-            // Your drawing code goes here
-        }
-    </script>
+        <!-- Canvas -->
+        <canvas id="AMV" width="800" height="600">
+            This browser does not support HTML5 canvas element 
+        </canvas>
+        <!-- Script -->
+        <script src="Canvas.js"> </script>
+        <script src="gl-matrix-min.js"> </script>
 </body>
 </html>
+

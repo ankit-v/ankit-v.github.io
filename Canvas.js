@@ -1,8 +1,6 @@
 var canvas = null;
 var gl = null;
 var bFullscreen = false;
-var canvas_original_width;
-var canvas_original_height;
 
 const webGLMacros =
 {
@@ -35,8 +33,8 @@ function main()
         console.log("Successfully obtained canvas");
 
     // Backup canvas dimensions
-    canvas_original_width = canvas.width;
-    canvas_original_height = canvas.height;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     // Initialize
     initialize();
@@ -72,8 +70,6 @@ function toggleFullscreen()
             canvas.webkitRequestFulScreen();  
         else if (canvas.msRequestFullscreen)
             canvas.msRequestFullscreen();
-
-        bFullscreen = true;
     }
     else
     {
@@ -85,8 +81,6 @@ function toggleFullscreen()
             document.webkitExitFullscreen();
         else if (document.msExitFullscreen)
             document.msExitFullscreen();
-
-        bFullscreen = false;
     }
 }
 
@@ -220,16 +214,6 @@ function initialize()
 
 function resize()
 {
-    // code
-    if (bFullscreen == true) {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-    }
-    else {
-        canvas.width = canvas_original_width;
-        canvas.height = canvas_original_height;
-    }
-
     if (canvas.height == 0)
         canvas.height = 1; 
 
