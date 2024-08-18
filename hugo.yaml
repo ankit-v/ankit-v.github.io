@@ -1,0 +1,213 @@
+baseURL: "https://ankit-v.github.io/"
+languageCode: "en-us"
+title: "Ankit Vishwakarma"
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+      
+params:
+  title: ""
+  description: Portfolio site
+  # staticPath: ""  # The path to serve the static files from
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    disableThemeToggle: true
+    defaultTheme: "dark" # dark
+
+  font:
+    fontSize: 1.1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # When using hex codes for colors, quotations must be used along with the # sign
+  # color:
+  #   textColor: "#343a40"
+  #   secondaryTextColor: "#6c757d"
+  #   textLinkColor: "#007bff"
+  #   backgroundColor: "#eaedf0"
+  #   secondaryBackgroundColor: "#64ffda1a"
+  #   primaryColor: "#007bff"
+  #   secondaryColor: "#f8f9fa"
+
+  #   darkmode:
+  #     textColor: "#e4e6eb"
+  #     secondaryTextColor: "#b0b3b8"
+  #     textLinkColor: "#ffffff"
+  #     backgroundColor: "#18191a"
+  #     secondaryBackgroundColor: "#212529"
+  #     primaryColor: "#ffffff"
+  #     secondaryColor: "#212529"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    showBrandLogo: false # Show brand logo in nav bar | default is true
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : True
+      showOnScrollUp : false
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: True
+      disableEducation: True
+      disableProjects: false
+      disableAchievements: True
+      disableContact: True
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Ankit Vishwakarma"
+    #subtitle: "Graphics Programmer"
+    #image: /images/hero.svg
+    bottomImage:
+      enable: true
+    roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/ankit-v
+        - icon: fab fa-linkedin
+          url: https://www.linkedin.com/in/ankit-vishwakarma-9624bb135/
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    #image: "/images/me.png"
+    content: |-
+      I'm a passionate Graphics Programmer with a deep enthusiasm for Real-Time Rendering technologies and graphics development. I’m adept at crafting visually stunning, high-performance applications through advanced optimization techniques and shader programming.
+
+      I have extensive experience with graphics APIs, including OpenGL, OpenGL ES, and DirectX 11, and I’m proficient in GPU profiling and debugging using tools like RenderDoc and Nsight.
+    skills:
+      enable: true
+      title: "Tools and Technologies"
+      items:
+        - "OpenGL"
+        - "GLSL"
+        - "DirectX 11"
+        - "HLSL"
+        - "OpenCL"
+        - "C++"
+        - "RenderDoc"
+        - "Nsight"
+        - "Blender"
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Rain Particles Rendering using OpenGL and OpenCL
+        content: This demo highlights the capabilities of Heterogeneous Parallel Programming by simulating rain particles through the interoperability of OpenGL and OpenCL. By adjusting particle counts to represent various mesh sizes, the simulation demonstrates the performance of both CPU and GPU processing, showcasing the power of parallel computing. 
+        image: /images/projects/hpp.png
+        featured:
+          name: Video
+          link: https://www.youtube.com/watch?v=23c8TQg2rhM
+        badges:
+          - "OpenGL"
+          - "OpenCL"
+          - "GPGPU"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/ankit-v
+
+      - title: "Inquilab Zindabad"
+        content: Contributed to a project featuring a patriotic song dedicated to our freedom fighters. Utilized OpenGL and C/C++ to create compelling visuals. Worked with a small, dedicated team to bring the project to life.
+        image: /images/projects/final-fragment.png
+        featured:
+          name: Video
+          link: https://www.youtube.com/watch?v=qsw_7_A0mqk
+        badges:
+          - "OpenGL"
+          - "C++"
+          - "GLSL"
+        links:
+          - icon: fab fa-github
+            url:    
+
+      - title: WebGL Demo
+        content: Dive into the heartfelt emotion of "Dukhi Mann Mere" with a cinematic twist, brought to life using WebGL and JavaScript. This visual journey captures the essence of the song, blending beautiful animations and visuals, all rendered in real-time.
+        image: /images/projects/webgl.jpg
+        featured:
+          name: Video
+          link: https://www.youtube.com/watch?v=94MH95pKXw8
+        badges:
+          - "WebGL"
+          - "OpenGL-ES"
+          - "JavaScript"
+        links:
+          - icon: fab fa-github
+            url: 
+
+      - title: Cinematic visualization using OpenGL and C++
+        content: Contributed to a team effort to create a cinematic representation of a song. This video is rendered in real time using C/C++ and OpenGL.
+        image: /images/projects/gagan-sadan.png
+        featured:
+          name: Video
+          link: https://www.youtube.com/watch?v=45oPfadRZx8
+        badges:
+          - "OpenGL"
+          - "GLSL"
+          - "C++"
+          - "Windows"
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: My inbox is always open. Whether you have a question or just want to say hi, I'll do my best to respond!
+    btnName: Mail me
+    btnLink: mailto:ankitvishwakarma753@gmail.com
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+    #   messageRows: 5
+    
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
